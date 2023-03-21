@@ -1,10 +1,3 @@
-tag = sys.argv[1]
-
-num_epochs = 500
-batch_size = 8
-block_size = 2048
-train_split = 0.9
-
 def preprocess_data(data):
     features = ['skill_id', 'correct']
     seqs = data.groupby(['user_id']).apply(lambda x: x[features].values.tolist())
