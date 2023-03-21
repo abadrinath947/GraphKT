@@ -1,3 +1,6 @@
+import numpy as np
+import torch
+
 def preprocess_data(data):
     features = ['skill_id', 'correct']
     seqs = data.groupby(['user_id']).apply(lambda x: x[features].values.tolist())
